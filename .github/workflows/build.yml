@@ -1,7 +1,7 @@
 name: Build Docker Images
 
 env:
-  DOCKERHUB_TAG: "foorschtbar/hyperion"
+  DOCKERHUB_TAG: "9000000ls/testsss"
   DOCKERHUB_SHORT_DESCRIPTION: "Docker Container for Hyperion.ng"
   DOCKERHUB_README_FILE: "README.md"
 
