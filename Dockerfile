@@ -38,4 +38,4 @@ RUN chmod +x install.sh && ./install.sh && rm install.sh
 
 EXPOSE 8090 8092 19400 19444 19445 
 
-ENTRYPOINT "/usr/bin/hyperion"
+ENTRYPOINT "/usr/bin/hyperiond"
