@@ -28,6 +28,29 @@ RUN set -eux; \
     libgl-dev  \
     libfreetype6 \
     libpython3.10; \
+    devscripts \
+    fakeroot \
+    debhelper \
+    libdistro-info-perl \
+    git \
+    curl \
+    python3-dev \
+    build-essential \
+    ninja-build \
+    libusb-1.0-0-dev \
+    libcec-dev \
+    libp8-platform-dev \
+    libudev-dev \
+    libavahi-core-dev \
+    libavahi-compat-libdnssd-dev \
+    zlib1g-dev \
+    libasound2-dev \
+    libjpeg-dev \
+    libturbojpeg0-dev \
+    libmbedtls-dev \
+    libftdi1-dev \
+    libssl-dev \
+    libglib2.0-dev \
     apt-get clean -q -y ; \
     apt-get autoremove -y ; \
     rm -rf /var/lib/apt/lists/*
