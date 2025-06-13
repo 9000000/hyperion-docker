@@ -27,7 +27,7 @@ RUN set -eux; \
     libexpat-dev  \
     libgl-dev  \
     libfreetype6 \
-    libpython3.10; \
+    libpython3.10 \
     devscripts \
     fakeroot \
     debhelper \
@@ -50,7 +50,7 @@ RUN set -eux; \
     libmbedtls-dev \
     libftdi1-dev \
     libssl-dev \
-    libglib2.0-dev \
+    libglib2.0-dev; \
     apt-get clean -q -y ; \
     apt-get autoremove -y ; \
     rm -rf /var/lib/apt/lists/*
