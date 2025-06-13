@@ -13,6 +13,7 @@ RUN set -eux; \
     apt-get install -y \
     wget \
     gnupg \
+    gpg \
     dirmngr \
     libgnutls30 \
     lsb-release \
