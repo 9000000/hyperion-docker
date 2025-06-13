@@ -1,14 +1,14 @@
 name: Build Docker Images
 
 env:
-  DOCKERHUB_TAG: "9000000ls/testsss"
+  DOCKERHUB_TAG: "matrix37/hyperion"
   DOCKERHUB_SHORT_DESCRIPTION: "Docker Container for Hyperion.ng"
   DOCKERHUB_README_FILE: "README.md"
 
 on:
   push:
   schedule:
-    - cron: "0 5 * * 5"
+    - cron: " 0 7 2 * *"
   workflow_dispatch:
 
 jobs:
