@@ -23,19 +23,20 @@ Example docker-compose configuration:
 ```yml
 services:
   hyperion:
-    image: foorschtbar/hyperion
+    image: matrix37/hyperion:nightly
     container_name: hyperion
     # privileged: true # for PWM
     ports:
-      - 8090:8090
-      - 8092:8092
-      - 19400:19400
-      - 19444:19444
-      - 19445:19445
+      - 8095:8090
+      - 8093:8092
+      - 19410:19400
+      - 19454:19444
+      - 19455:19445
     volumes:
-      - ./config/:/root/.hyperion
-    devices:
-      - /dev/video0:/dev/video0
+      - ./config/:/root/.hyperion:rw
+    #devices:
+    # - /dev/video0:/dev/video0
     # - /dev/spidev0.0:/dev/spidev0.0 # for SPI
     restart: unless-stopped
+    network_mode: host
 ```
