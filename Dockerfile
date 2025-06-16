@@ -56,9 +56,15 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*
 
 # Install latest Hyperion
-COPY install.sh .
-RUN chmod +x install.sh && ./install.sh && rm install.sh
-
+RUN set -eux; \
+    wget --no-check-certificate -qO- https://releases.hyperion-project.org/hyperion.pub.key | gpg --dearmor -o /usr/share/keyrings/hyperion.pub.gpg;\
+    echo "deb [signed-by=/usr/share/keyrings/hyperion.pub.gpg] https://apt.releases.hyperion-project.org/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hyperion.list;\
+    apt-get update ; \
+    apt-get install -y hyperion; \
+    apt-get clean -q -y ; \
+    apt-get autoremove -y ; \
+    rm -rf /var/lib/apt/lists/*
+    
 EXPOSE 8090 8092 19400 19444 19445 
 
 ENTRYPOINT "/usr/bin/hyperiond"
